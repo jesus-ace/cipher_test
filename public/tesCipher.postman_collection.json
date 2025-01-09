@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "9bcb6602-83b6-4522-a25c-935e09ed9ddb",
+		"name": "tesCipher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listPruduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkhSNU8zNzFvcUNMRkV1NktMM2d2Smc9PSIsInZhbHVlIjoiU29MM0hyVFFoWTJBRnozNldNN1FjeEIva2N2SUoyZGZkaUg3RGFWZW5qU0hHV1FEaTBVTUNCQURxV1JUY05EUUZ5QktVSktSQXMxcHlLVkFWNVBjS3FKNjZ1d1Y1bHFGYlEyUUxLZGxhaWlLYnZ2L0NtMkt3YVFBT214c1BBdUsiLCJtYWMiOiJmOTk3OWJjNzczNmE1M2JjYzVjMzgzZWVhYzhkNmQ5MzZkZjRhMmU4ZDAzZjBlMjNiMTg1ZWNjZWM0NjNkZTY1IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6ImxwQVNFWjlpemh0TS9SeHd6cFk1emc9PSIsInZhbHVlIjoiMmVQd2thbms5UVZBSWdhYTFIY1c4U1NuRUZWT1RyelBDQ1EwelFFVzV3U1J3NWNwUVVTQ2Y1T1k3dnBkbURMb2JaVmRZVTVoTS9INVlnYzREaDA2dzcvTCtKZm52cE5JMCsvMjRoQ292YmxFRldPY1N5QlpVT1VRSTRoMEdzT2kiLCJtYWMiOiJiNTA5MWUzY2ZkOWQ0NWZiNDUyZGM4NDlkYTk4OTEzOGRhNjcwODg0Y2I2YjY2MmQ3OGEyNzUzNjQ4MDRmZmI2IiwidGFnIjoiIn0%3D",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\" : \"producto2\",\n   \"description\" : \"description2\",\n   \"price\" : \"120.00\",\n   \"currency_id\" : 5,\n   \"tax_cost\" : \"500.85\",\n   \"manufacturing_cost\" : \"500.85\",\n   \"divisas\" :[\n        {\n           \"name\" : \"dolar\",\n           \"symbol\" : \"$\",\n           \"exchange_rate\" : \"500.50\"\n        },\n        {\n           \"name\" : \"Bolivares\",\n           \"symbol\" : \"BS\",\n           \"exchange_rate\" : \"36000.50\"\n        }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_price_product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"dolar\",\n    \"symbol\" : \"$\",\n    \"exchange_rate\" : \"600.50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/8/prices",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"8",
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\" : \"producto19\",\n   \"description\" : \"description2\",\n   \"price\" : \"120.00\",\n   \"currency_id\" : 5,\n   \"tax_cost\" : \"500.85\",\n   \"manufacturing_cost\" : \"500.85\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productoporid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\" : \"producto19\",\n   \"description\" : \"description2\",\n   \"price\" : \"120.00\",\n   \"currency_id\" : 5,\n   \"tax_cost\" : \"500.85\",\n   \"manufacturing_cost\" : \"500.85\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pricesxproduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/7/prices",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"7",
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/6",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "XSRF-TOKEN",
+			"value": "eyJpdiI6IkhSNU8zNzFvcUNMRkV1NktMM2d2Smc9PSIsInZhbHVlIjoiU29MM0hyVFFoWTJBRnozNldNN1FjeEIva2N2SUoyZGZkaUg3RGFWZW5qU0hHV1FEaTBVTUNCQURxV1JUY05EUUZ5QktVSktSQXMxcHlLVkFWNVBjS3FKNjZ1d1Y1bHFGYlEyUUxLZGxhaWlLYnZ2L0NtMkt3YVFBT214c1BBdUsiLCJtYWMiOiJmOTk3OWJjNzczNmE1M2JjYzVjMzgzZWVhYzhkNmQ5MzZkZjRhMmU4ZDAzZjBlMjNiMTg1ZWNjZWM0NjNkZTY1IiwidGFnIjoiIn0%3D",
+			"type": "default"
+		},
+		{
+			"key": "url",
+			"value": "127.0.0.1:8000",
+			"type": "default"
+		}
+	]
+}
